@@ -2,27 +2,25 @@ package com.softtek.sonarqube.demo.service;
 
 import com.softtek.sonarqube.demo.entities.Promotion;
 import com.softtek.sonarqube.demo.service.impl.PromotionServiceImpl;
-import org.junit.Before;
-import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.*;
 
-public class PromotionServiceTest {
+public class PromotionServiceTests {
 
     PromotionService promotionService;
 
-    @Before
+    @BeforeEach
     public void setup(){
         promotionService = new PromotionServiceImpl();
     }
 
     @Test
-    public void getPromotions() {
+    void getPromotions() {
         List<Promotion> result = promotionService.get();
 
         assertFalse(result.isEmpty());
@@ -30,7 +28,7 @@ public class PromotionServiceTest {
     }
 
     @Test
-    public void savePromotions(){
+    void savePromotions(){
         Promotion promotion = new Promotion("Promotion 1", "Promotion Description 1");
         assertNull(promotion.getId());
 
