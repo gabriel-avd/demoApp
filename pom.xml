@@ -19,7 +19,7 @@
 
         <!--> SonarQube properties<-->
         <project.test.result.directory>${project.build.directory}/test-results</project.test.result.directory>
-        <sonar.host.url>http://localhost:9000/sonarqube</sonar.host.url>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
         <sonar.scm.provider>git</sonar.scm.provider>
         <sonar.sources>src/main/java</sonar.sources>
         <sonar.tests>src/test/java</sonar.tests>

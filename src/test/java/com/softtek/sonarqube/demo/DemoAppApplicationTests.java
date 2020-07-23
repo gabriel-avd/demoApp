@@ -27,12 +27,4 @@ class DemoAppApplicationTests {
 	void contextLoads() {
 	}
 
-	@Test
-	public void getPromotions() {
-		List<Promotion> result = promotionService.get();
-
-		assertFalse(result.isEmpty());
-		assertThat(result.size(), is(2));
-	}
-
 }
